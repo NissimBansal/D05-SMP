@@ -1,1 +1,3 @@
-# D05-SMP intro
+# D05-SMP
+## Assignment 1
+---
