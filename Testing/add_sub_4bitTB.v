@@ -19,10 +19,10 @@ always @(SUB) begin
      bn = ( b ^ SUB_4bit ) + ( 1 & SUB );
 end
 
-fullAdder fa1(.a(a[0]), .b(bn[0]), .c_in(cin), .out(out[0]), .cout(c1));
-fullAdder fa2(.a(a[1]), .b(bn[1]), .c_in(c1), .out(out[1]), .cout(c2));
-fullAdder fa3(.a(a[2]), .b(bn[2]), .c_in(c2), .out(out[2]), .cout(c3));
-fullAdder fa4(.a(a[3]), .b(bn[3]), .c_in(c3), .out(out[3]), .cout(cout));
+fullAdder fa1(.a(a[0]), .b(bn[0]), .cin(cin), .out(out[0]), .cout(c1));
+fullAdder fa2(.a(a[1]), .b(bn[1]), .cin(c1), .out(out[1]), .cout(c2));
+fullAdder fa3(.a(a[2]), .b(bn[2]), .cin(c2), .out(out[2]), .cout(c3));
+fullAdder fa4(.a(a[3]), .b(bn[3]), .cin(c3), .out(out[3]), .cout(cout));
 
 assign overflow = c3 ^ cout;
 
