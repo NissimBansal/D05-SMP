@@ -3,14 +3,14 @@ module add_sub_4bitTB ();
 
 reg signed [3:0] a;
 reg signed [3:0] b;
-reg signed [3:0] bn;
 reg cin;
 reg SUB;
-reg SUB_4bit;
 wire signed [3:0] out;
 wire cout;
 wire overflow;
 
+reg signed [3:0] bn;
+reg SUB_4bit;
 wire c1, c2, c3;
 
 always @(SUB) begin
@@ -26,7 +26,40 @@ fullAdder fa4(.a(a[3]), .b(bn[3]), .cin(c3), .out(out[3]), .cout(cout));
 
 assign overflow = c3 ^ cout;
 
+initial begin
 
+    {a, b, bn, cin, SUB} <= 0;
+    $monitor("a=0x%0h b=0x%0h SUB=0x%0h out=0x%0h overflow=0x%0h", a, b, SUB, out, overflow);
+
+    //test case 1
+    #20 SUB <= 0; 
+        a[3:0] <= 4'b0011; 
+        b[3:0] <= 4'b0100;
+    //test case 2
+    #30 SUB <= 1;
+        a[3:0] <= 4'b0011; 
+        b[3:0] <= 4'b0100;
+    //test case 3
+    #40 SUB <= 0;
+        a[3:0] <= 4'b0111; 
+        b[3:0] <= 4'b0011;
+    //test case 4
+    #50 SUB <= 1;
+        a[3:0] <= 4'b0000; 
+        b[3:0] <= 4'b1000;
+    //test case 5
+    #60 SUB <= 0;
+        a[3:0] <= 4'b1111; 
+        b[3:0] <= 4'b1110;
+    //test case 6
+    #70 SUB <= 1;
+        a[3:0] <= 4'b0111; 
+        b[3:0] <= 4'b0011;
+    //test case 7
+    #80 SUB <= 1;
+        a[3:0] <= 4'b1000; 
+        b[3:0] <= 4'b0001;
+end
 
 initial begin
     $dumpfile ("add_sub_4bit.vcd");
