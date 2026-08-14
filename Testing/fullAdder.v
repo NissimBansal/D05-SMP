@@ -1,4 +1,4 @@
-module add_sub_4bit (   input a,
+module fullAdder (   input a,
                         input b,
                         input cin,
                         output out,
