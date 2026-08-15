@@ -29,7 +29,7 @@ assign overflow = c3 ^ cout;
 initial begin
 
     {a, b, bn, cin, SUB} <= 0;
-    $monitor("a=0x%0h b=0x%0h SUB=0x%0h out=0x%0h overflow=0x%0h", a, b, SUB, out, overflow);
+    $monitor("a=%b b=%b SUB=%b out=%b overflow=%b", a, b, SUB, out, overflow);
 
     //test case 1
     #20 SUB <= 0; 
