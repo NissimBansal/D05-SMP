@@ -30,31 +30,31 @@ initial begin
     $monitor("a=%b b=%b SUB=%b out=%b overflow=%b", a, b, SUB, out, overflow);
 
     //test case 1
-    #20 SUB <= 0; 
+    #20; SUB <= 0; 
         a[3:0] <= 4'b0011; 
         b[3:0] <= 4'b0100;
     //test case 2
-    #30 SUB <= 1;
+    #20; SUB <= 1;
         a[3:0] <= 4'b0011; 
         b[3:0] <= 4'b0100;
     //test case 3
-    #40 SUB <= 0;
+    #20; SUB <= 0;
         a[3:0] <= 4'b0111; 
         b[3:0] <= 4'b0011;
     //test case 4
-    #50 SUB <= 1;
+    #20; SUB <= 1;
         a[3:0] <= 4'b0000; 
         b[3:0] <= 4'b1000;
     //test case 5
-    #60 SUB <= 0;
+    #20; SUB <= 0;
         a[3:0] <= 4'b1111; 
         b[3:0] <= 4'b1110;
     //test case 6
-    #70 SUB <= 1;
+    #20; SUB <= 1;
         a[3:0] <= 4'b0111; 
         b[3:0] <= 4'b0011;
     //test case 7
-    #80 SUB <= 1;
+    #20; SUB <= 1;
         a[3:0] <= 4'b1000; 
         b[3:0] <= 4'b0001;
 end
