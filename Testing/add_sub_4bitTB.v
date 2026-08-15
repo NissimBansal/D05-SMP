@@ -10,13 +10,11 @@ wire cout;
 wire overflow;
 
 reg signed [3:0] bn;
-reg SUB_4bit;
 wire c1, c2, c3;
 
-always @(SUB) begin
+always @(SUB or b) begin
      cin = SUB;
-     SUB_4bit = {4{SUB}};
-     bn = ( b ^ SUB_4bit ) + ( 1 & SUB );
+     bn = b ^ {4{SUB}};
 end
 
 fullAdder fa1(.a(a[0]), .b(bn[0]), .cin(cin), .out(out[0]), .cout(c1));
