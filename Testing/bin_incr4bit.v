@@ -1,5 +1,6 @@
 module inc (input [3:0] A,
-            output [3:0] Y)
+            output [3:0] Y,
+            output overflow)
 ;
 
 wire [3:0] An;
@@ -20,5 +21,6 @@ and(w4, An[3], A[2], A[1], A[0]);
 or(w5, An[2], An[1], An[0]);
 and(w6, w5, A[3]);
 or(Y[3], w4, w6);
+and(overflow, A[0], A[1], A[2], A[3]);
 
 endmodule
