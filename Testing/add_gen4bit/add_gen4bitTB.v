@@ -27,6 +27,7 @@ initial begin
     
     #10; a[3:0] <= 4'b1111; 
          b[3:0] <= 4'b1110;
+    #10;
 end
 
 initial begin
