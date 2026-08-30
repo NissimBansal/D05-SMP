@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module bin_incr4bitTB ();
 
 reg [3:0] A;
