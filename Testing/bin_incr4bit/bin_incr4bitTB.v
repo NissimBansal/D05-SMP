@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 module bin_incr4bitTB ();
 
 reg [3:0] A;
@@ -11,7 +11,7 @@ inc inc0 (.A(A), .Y(Y), .overflow(overflow));
 initial begin
 
     A <= 0;
-    $monitor("A=%b Y=%b overflow=%b", A, Y, overflow);
+    $monitor("time=%0t A=%b Y=%b overflow=%b", $time, A, Y, overflow);
 
     for (i = 0; i < 16; i = i + 1) begin
         #10; A <= i;
