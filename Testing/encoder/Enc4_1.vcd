@@ -1,0 +1,29 @@
+$date
+	Sun Aug 30 19:47:03 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Enc16_4_tb $end
+$var wire 4 ! CODE [3:0] $end
+$var reg 16 " KEY [15:0] $end
+$var integer 32 # i [31:0] $end
+$scope module u0 $end
+$var wire 16 $ KEY [15:0] $end
+$var reg 4 % CODE [3:0] $end
+$var integer 32 & i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0xxxxxxxxxxxxxxxx &
+b0 %
+b1000000000000000 $
+b10000 #
+b1000000000000000 "
+b0 !
+$end
