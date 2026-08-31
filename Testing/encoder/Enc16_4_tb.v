@@ -13,7 +13,7 @@ initial begin
     $monitor("KEY=%b CODE=%b", KEY, CODE);
 
     for (i = 0; i < 16; i = i + 1) begin
-        KEY <= (1 << i); #10
+        KEY <= (1 << i); #10;
     end
 
 end
