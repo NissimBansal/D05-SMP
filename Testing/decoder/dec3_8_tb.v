@@ -4,12 +4,8 @@ module dec3_8_tb ();
 reg [2:0] in;
 wire [7:0] out;
 integer i;
-reg enn;
 
-dec_if2_4 u0 (.in(in[1:0]), .en(enn), .out(out[3:0]));
-dec_if2_4 u1 (.in(in[1:0]), .en(in[2]), .out(out[7:4]));
-
-always @ (in) enn = ~in[2];
+dec3_8 u0 (.in(in), .out(out));
 
 initial begin 
     in <= 3'b000;
@@ -27,4 +23,3 @@ initial begin
 end
 
 endmodule
-
