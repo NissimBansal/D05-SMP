@@ -15,7 +15,6 @@ initial begin
     for (i = 0; i < 16; i = i + 1) begin
         KEY <= (1 << i); #10;
     end
-
 end
 
 initial begin
