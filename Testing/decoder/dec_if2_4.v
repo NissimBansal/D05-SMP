@@ -1,6 +1,6 @@
-module dec_if2_4(  input [1:0] in,
-                input en,
-                output reg [3:0] out)
+module dec_if2_4(input [1:0] in,
+                 input en,
+                 output reg [3:0] out)
 ;
 
 always @ (*) begin
