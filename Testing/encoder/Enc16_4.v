@@ -20,6 +20,6 @@ while (i != 0) begin
 
 end
 
-assign CODE = KEY ? count : 4'b0;
+assign CODE = KEY ? count : 4'bzzzz;
 
 endmodule
