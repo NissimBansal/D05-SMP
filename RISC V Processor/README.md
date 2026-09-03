@@ -13,20 +13,20 @@ The whole process of executing a full instruction is divided into 5 stages namel
 - Write-Back:- Writing back to the register files the values from ALU / data memory.
 
 ## Modules of the single cycle RISC V processor
-- Program Counter:-
+- Program Counter:- The module which counts which instruction will be sent next for decoding. Its output is an address which can either be the last instruction's address + 4 (next instruction in the instruction memory) or it can be described by a branch instruction to go to a particular instruction.
 
-- Control Logic:- 
+- Control Logic:- This module sends control bits to the MUXes, ALU, data memory, register file and more. It's basically the brain of our processor.
 
-- Instruction memory:- 
+- Instruction memory:- The place in the memory where the 32-bit instructions are stored sequentially wordwise. It shares the same memory space as data memory.
 
-- Register file:- 
+- Register file:- A set of 32 registers each of width 32-bits that stores variable values, immediates, address of other registers, etc. 
 
-- Immediate Generator:- 
+- Immediate Generator:- This module is used to create 32-bit immediates from instructions. Different instructions will cause different types and lengths of immediates to be made.
 
-- Branch Comparator:-
+- Branch Comparator:- In BRANCH instruction types, this is used to compare 2 values. It is also the only module that can send control bits aside from the instruction obviously.
 
-- ALU:-
+- ALU:- The Arithmetic Logic Unit is the main working head of the processor. It can perform mathematical operations 
 
 - Data memory:- 
 
-and basic digital components like MUXes, decoders, etc.
+and basic digital components like MUXes, decoders...
