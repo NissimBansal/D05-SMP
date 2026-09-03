@@ -28,3 +28,5 @@ The whole process of executing a full instruction is divided into 5 stages namel
 - ALU:-
 
 - Data memory:- 
+
+and basic digital components like MUXes, decoders, etc.
