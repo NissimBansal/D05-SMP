@@ -17,7 +17,7 @@ The whole process of executing a full instruction is divided into 5 stages namel
 
 - Control Logic:- This module sends control bits to the MUXes, ALU, data memory, register file and more. It's basically the brain of our processor.
 
-- Instruction memory:- The place in the memory where the 32-bit instructions are stored sequentially wordwise. It shares the same memory space as data memory.
+- Instruction memory:- The place in the memory where the 32-bit instructions are stored sequentially wordwise. Also it shares the same memory space as data memory space but we consider it different spaces for convenience purposes.
 
 - Register file:- A set of 32 registers each of width 32-bits that stores variable values, immediates, address of other registers, etc. 
 
@@ -25,8 +25,10 @@ The whole process of executing a full instruction is divided into 5 stages namel
 
 - Branch Comparator:- In BRANCH instruction types, this is used to compare 2 values. It is also the only module that can send control bits aside from the instruction obviously.
 
-- ALU:- The Arithmetic Logic Unit is the main working head of the processor. It can perform mathematical operations 
+- ALU:- The Arithmetic Logic Unit is the main working head of the processor. It can perform mathematical operations like addition (of registers, intermediates, addresses), subtraction, multiplication, shift operations.
 
-- Data memory:- 
+- Data memory:- The component of a computer used to store all kinds of data. It is divided into further sub-parts and going into all of that is another whole chapter.
 
 and basic digital components like MUXes, decoders...
+
+## Instructions that are implemented in this project
