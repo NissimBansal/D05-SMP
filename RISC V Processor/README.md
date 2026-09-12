@@ -4,16 +4,16 @@ The procesor consists of various modules integrated together to carry out differ
 The whole data-path is divided into 5 stages namely-
 - Instruction Fetch (IF):- Process of getting the next instruction from the instruction memory. This stage might also update the program counter if the next value of program counter is the next instruction in instruction memory.
 
-- Instruction Decode (ID):- Defined as separating the various components of the instruction and alotting them where they are needed(register file, control signals, ALU, etc).
+- Instruction Decode (ID):- Defined as separating the various components of the instruction and alotting them where they are needed (register file, control signals, ALU, etc).
 
-- Execute (EX):- This stage involves the ALU calculating anything that it's sent from register file, immediate generator or control signals.
+- Execute (EX):- This stage involves the ALU calculating anything that it has been sent from register file, immediate generator or control signals.
 
 - Memory Access (MEM):- This stage comes in play when we need to STORE or LOAD something from the data memory. This is also often the longest stage in the whole single-cycle architecture.
 
-- Write-Back (WB):- Writing back to the register files the values from ALU / data memory.
+- Write-Back (WB):- Writing back to the register files the values from ALU / data memory. In a single cycle processor, this happens on the clock edge of the next instruction or the IF stage of the netx instruction.
 
 ## Modules of the single cycle RISC V processor
-- Program Counter:- The module which counts which instruction will be sent next for decoding. Its output is an address which can either be the last instruction's address + 4 (next instruction in the instruction memory) or it can be described by a branch instruction to go to a particular instruction.
+- Program Counter:- The module which counts which instruction will be sent next for decoding. Its output is an address which can either be the last instruction's address + 4 bytes (next instruction in the instruction memory) or it can be described by a branch instruction to go to a particular address.
 
 - Control Logic:- This module sends control bits to the MUXes, ALU, data memory, register file and more. It's basically the brain of our processor.
 
