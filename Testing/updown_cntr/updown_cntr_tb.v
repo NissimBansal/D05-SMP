@@ -10,7 +10,7 @@ always #10 clk = ~clk;
 
 initial begin
 
-    {din, clk, mode} <= 5'b0;
+    {din, clk, mode} <= 6'b0;
     {clear, preset, load} <= 3'b111;
 
     $monitor("time=%0t clear=%b preset=%b load=%b mode=%b din=%b q=%b", $time, clear, preset, load, mode, din, q);
