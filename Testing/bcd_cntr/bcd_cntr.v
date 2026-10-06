@@ -13,7 +13,7 @@ module bcd_cntr (   input clear, clk,
                     output [3:0] q)
 ;
 
-wire clr = ~(q[3] & q[1]) & clear;
+wire clr = (~(q[3] & q[1])) & clear;
 
 t_ff u0 (.t(1'b1),.Clear(clr),.Clk(clk),.Q(q[0]));
 t_ff u1 (.t(1'b1),.Clear(clr),.Clk(q[0]),.Q(q[1]));
