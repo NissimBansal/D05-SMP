@@ -2,7 +2,7 @@ module t_ff (   input t, Clear, Clk,
                 output reg Q)
 ;
 
-always @(posedge Clk or negedge Clear) begin
+always @(negedge Clk or negedge Clear) begin
     if (!Clear) Q <= 1'b0;
     else if (t) Q <= ~Q;
 end
