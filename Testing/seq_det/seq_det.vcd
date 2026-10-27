@@ -1,0 +1,94 @@
+$date
+	Tue Oct 27 05:59:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module seq_det_tb $end
+$var wire 1 ! Z $end
+$var wire 1 " Y $end
+$var reg 1 # X $end
+$var reg 1 $ clear $end
+$var reg 1 % clk $end
+$scope module u0 $end
+$var wire 1 # X $end
+$var wire 1 $ clear $end
+$var wire 1 % clk $end
+$var reg 1 " Y $end
+$var reg 1 ! Z $end
+$var reg 3 & current_state [2:0] $end
+$var reg 3 ' next_state [2:0] $end
+$var reg 1 ( z $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+bx0x '
+b0 &
+0%
+0$
+x#
+0"
+0!
+$end
+#5
+1%
+#10
+b1 '
+0%
+1#
+1$
+#15
+b1 &
+1%
+#20
+b10 '
+0%
+0#
+#25
+b100 '
+b10 &
+1%
+#30
+b11 '
+0%
+1#
+#35
+1"
+b110 '
+b11 &
+1%
+#40
+0%
+#45
+1!
+b1 '
+0"
+b110 &
+1%
+#50
+1!
+b10 '
+0%
+0#
+#55
+b100 '
+0!
+1(
+b10 &
+1%
+#60
+b11 '
+0%
+1#
+#65
+b110 '
+b11 &
+1%
+#70
+0%
