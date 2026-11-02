@@ -1,0 +1,111 @@
+$date
+	Mon Nov 02 09:21:22 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fifo_32bit_tb $end
+$var wire 3 ! wptr [2:0] $end
+$var wire 3 " rptr [2:0] $end
+$var wire 1 # full $end
+$var wire 1 $ empty $end
+$var wire 32 % dataout [31:0] $end
+$var reg 1 & clk $end
+$var reg 32 ' datain [31:0] $end
+$var reg 1 ( re $end
+$var reg 1 ) reset $end
+$var reg 1 * we $end
+$scope module dut $end
+$var wire 1 & clk $end
+$var wire 32 + datain [31:0] $end
+$var wire 1 ( re $end
+$var wire 1 ) reset $end
+$var wire 1 * we $end
+$var wire 1 # full $end
+$var wire 1 $ empty $end
+$var reg 32 , dataout [31:0] $end
+$var reg 3 - rptr [2:0] $end
+$var reg 3 . wptr [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx .
+bx -
+b0 ,
+b0 +
+0*
+0)
+0(
+b0 '
+0&
+b0 %
+x$
+x#
+bx "
+bx !
+$end
+#10
+0#
+1$
+b0 !
+b0 .
+b0 "
+b0 -
+1&
+#20
+b11011110101011011011111011101111 '
+b11011110101011011011111011101111 +
+1*
+1)
+0&
+#30
+0$
+b1 !
+b1 .
+1&
+#40
+b11111111111111111111111111111111 '
+b11111111111111111111111111111111 +
+0&
+#50
+b10 !
+b10 .
+1&
+#60
+1(
+b1000000000000010000000101001 '
+b1000000000000010000000101001 +
+0&
+#70
+b1 "
+b1 -
+b11011110101011011011111011101111 %
+b11011110101011011011111011101111 ,
+b11 !
+b11 .
+1&
+#80
+0*
+0&
+#90
+b10 "
+b10 -
+b11111111111111111111111111111111 %
+b11111111111111111111111111111111 ,
+1&
+#100
+0&
+#110
+1$
+b11 "
+b11 -
+b1000000000000010000000101001 %
+b1000000000000010000000101001 ,
+1&
+#120
+0&
